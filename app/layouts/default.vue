@@ -10,5 +10,8 @@
 
 <script setup>
 import Navbar from '~/components/base/Navbar.vue';
-import realm from '@/assets/img/realm.webp'; 
+import realm from '@/assets/img/realm.webp';
+
+const isOpen = ref(false)
+
 </script>

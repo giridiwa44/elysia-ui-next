@@ -94,8 +94,8 @@ const resultItems = ref([]);
 
 // Data
 const items = [
-    { title: "Introduction", url: "/introduction", category: "Pages", icon: FileText },
-    { title: "Get Started", url: "/getting-started", category: "Pages", icon: Book }
+    { title: "Introduction", url: "/introduction", category: "Docs", icon: FileText },
+    { title: "Get Started", url: "/getting-started", category: "Docs", icon: Book }
 ];
 
 const groupedResults = computed(() => {

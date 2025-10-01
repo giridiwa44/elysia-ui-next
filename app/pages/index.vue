@@ -29,7 +29,7 @@
               class="flex flex-wrap items-center justify-center gap-2 pt-8 pb-16 sm:gap-3 md:justify-start"
             >
               <a
-                href="/"
+                href="/docs/introduction"
                 class="group inline-flex items-center justify-center gap-2 rounded-lg border border-secondary-800 bg-secondary-800 font-semibold text-white hover:border-secondary-900 hover:bg-secondary-900 hover:text-white focus:ring-secondary-500/50 active:border-secondary-700 active:bg-secondary-700 dark:border-secondary-600/50 dark:bg-secondary-500/50 dark:ring-secondary-600/50 dark:hover:border-secondary-600 dark:hover:bg-secondary-600/75 dark:active:border-secondary-600/50 dark:active:bg-secondary-600/50 focus:ring-2 focus:outline-hidden min-w-[2.875rem] p-3 text-sm leading-5 sm:px-4"
               >
                 <span>Get Started</span>
@@ -329,4 +329,5 @@
 </template>
 <script setup>
 import elysia from "@/assets/img/elysia.webp";
+import realm from "@/assets/img/realm.webp";
 </script>

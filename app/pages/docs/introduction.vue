@@ -1,5 +1,8 @@
 <template>
-<h1>Welcome</h1>
+    <h1>Introduction</h1>
 </template>
-<script>
+<script setup>
+definePageMeta({
+  layout: "docs"
+})
 </script>
