@@ -16,7 +16,7 @@
           </h2>
           <button
             @click="isOpen = false"
-            class="text-zinc-500 hover:text-zinc-900 dark:hover:text-white"
+            class="text-zinc-500 hover:text-zinc-900 dark:hover:text-white cursor-pointer"
           >
             ✕
           </button>

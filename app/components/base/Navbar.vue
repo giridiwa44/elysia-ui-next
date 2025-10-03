@@ -30,7 +30,7 @@
           </a>
           <a
             class="group relative text-sm font-semibold text-secondary-900 hover:text-black dark:text-secondary-100 dark:hover:text-white"
-            href="/"
+            href="/components/accordion"
             ><span
               class="absolute -inset-x-2.5 -inset-y-1.5 rounded-xl bg-secondary-100 dark:bg-secondary-700/50 scale-0 transition ease-out group-hover:scale-100 group-active:scale-105 group-active:bg-secondary-200 dark:group-active:bg-secondary-700/75"
             ></span>

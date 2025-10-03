@@ -11,11 +11,12 @@ export default defineNuxtConfig({
         lang: 'en',
       }
     },
+
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   modules: ['@nuxt/fonts'],
-  css:['~/assets/css/main.css'],
+  css:['~/assets/css/main.css', './assets/css/nprogress.css'],
   vite: {
     plugins: [
       tailwindcss(),

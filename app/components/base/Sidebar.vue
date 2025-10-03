@@ -14,16 +14,19 @@
         >
           Docs
         </h5>
-        <a
-          href="/docs/introduction"
-          class="flex items-center border-l-2 pl-3 text-sm leading-6 border-elysia-hover font-semibold font-display text-secondary-950 dark:border-elysia-primary dark:text-white"
-          >Introduction</a
+        <NuxtLink
+          v-for="item in menu"
+          :key="item.path"
+          :to="item.path"
+          class="flex items-center border-l-2 pl-3 text-sm leading-6 font-display"
+          :class="[
+            route.path === item.path
+              ? 'border-elysia-hover font-semibold text-secondary-950 dark:border-elysia-primary dark:text-white'
+              : 'border-secondary-300 font-normal text-secondary-300 dark:text-white'
+          ]"
         >
-        <a
-          href="/"
-          class="flex items-center border-l-2 pl-3 text-sm leading-6 border-secondary-300 font-normal text-secondary-300 font-display dark:text-white"
-          >Getting Started</a
-        >
+        {{ item.title }}
+        </NuxtLink>
       </nav>
     </simplebar>
   </aside>
@@ -31,8 +34,12 @@
 <script setup>
 import simplebar from "simplebar-vue";
 import "simplebar-vue/dist/simplebar.min.css";
+import menu from "~/menu";
+import { useRoute } from "vue-router";
 
 defineProps({
   isOpen: Boolean
 })
+
+const route = useRoute()
 </script>
