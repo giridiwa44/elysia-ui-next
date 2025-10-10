@@ -18,7 +18,7 @@
             ></div>
             <div class="max-w-full grow overflow-hidden p-4 lg:ml-48 xl:ml-60">
               <article
-                class="prose prose-sm prose-zinc dark:prose-invert prose-h1:text-secondary-900 dark:prose-h1:text-white prose-h2:text-secondary-800 dark:prose-h2:text-secondary-100 prose-p:text-secondary-800 dark:prose-p:text-secondary-200 prose-a:text-secondary-700 prose-a:decoration-secondary-500/50 prose-a:underline-offset-2 prose-a:hover:text-black dark:prose-a:text-secondary-300 dark:prose-a:decoration-secondary-400/50 dark:prose-a:hover:text-white prose-pre:text-sm max-w-2xl font-display ml-3"
+                class="docs space-y-4 max-w-2xl font-display ml-3"
               >              
                 <slot />
               </article>

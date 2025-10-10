@@ -15,8 +15,7 @@
     "lucide-vue-next": "^0.544.0",
     "nprogress": "^0.2.0",
     "nuxt": "^4.1.2",
-    "nuxt-shiki": "^0.3.1",
-    "shiki": "^3.13.0",
+    "prismjs": "^1.30.0",
     "simplebar-vue": "^2.4.2",
     "tailwindcss": "^4.1.13",
     "vue": "^3.5.22",
@@ -24,6 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "@types/nprogress": "^0.2.3"
+    "@types/nprogress": "^0.2.3",
+    "@types/prismjs": "^1.26.5"
   }
 }

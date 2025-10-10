@@ -110,12 +110,12 @@
             class="flex justify-between items-center px-4 py-3 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-800"
           >
             <span
-              >Press <kbd class="px-1 py-0.5 border rounded">ESC</kbd> to
+              >Press <kbd class="px-1 py-0.5 border border-gray-200 rounded">ESC</kbd> to
               close</span
             >
             <span
-              >Use <kbd class="px-1 py-0.5 border rounded">↑</kbd> /
-              <kbd class="px-1 py-0.5 border rounded">↓</kbd></span
+              >Use <kbd>↑</kbd> /
+              <kbd>↓</kbd></span
             >
           </div>
         </div>
@@ -134,7 +134,7 @@ import {
   nextTick,
 } from "vue";
 import { useRouter } from "vue-router";
-import { Book, FileText } from "lucide-vue-next";
+import { Book, FileText, Box } from "lucide-vue-next";
 
 const router = useRouter();
 
@@ -159,6 +159,12 @@ const items = [
     category: "Docs",
     icon: Book,
   },
+  {
+    title: "Accordion",
+    url: "/components/accordion",
+    category: "Components",
+    icon: Box,
+  }
 ];
 
 const groupedResults = computed(() => {

@@ -1,4 +1,16 @@
 export default [
-    { path: "/docs/introduction", title: "Introduction" },
-    { path: "/docs/getting-started", title: "Getting Started" },
+  {
+    title: 'Docs',
+    items: [
+      { path: '/docs/introduction', title: 'Introduction',  },
+      { path: '/docs/getting-started', title: 'Getting Started' },
+    ],
+  },
+  {
+    title: 'Component',
+    items: [
+      { path: '/components/accordion', title: 'Accordion' },
+      { path: '/components/alert' ,title: 'Alert' },
+    ],
+  },
 ]

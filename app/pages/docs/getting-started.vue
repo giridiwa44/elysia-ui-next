@@ -1,30 +1,48 @@
 <template>
-  <h1>{{ pageTitle }}</h1>
-  <p>
+  <h1 class=" dark:text-secondary-100">
+    {{ pageTitle }}
+  </h1>
+  <p
+  
+  >
     Thank you so much for trying out our free Alphine components! We're working
     on expanding our Alphine.js and Tailwind CSS libraries with more examples in
     the future, so stay tuned for more updates.
   </p>
-  <p>
+  <p
+  
+  >
     To use Elysia UI, there are several requirements that you must fulfill,
     including:
   </p>
-  <ul>
-    <li><a href="https://alphine.dev" class="font-bold">Alphine JS 3.x</a></li>
+  <ul
+    
+  >
     <li>
-      <a href="https://alphine.dev/plugins/focus" class="font-bold"
+      <a href="https://alphine.dev" class="font-bold underline"
+        >Alphine JS 3.x</a
+      >
+    </li>
+    <li>
+      <a href="https://alphine.dev/plugins/focus" class="font-bold underline"
         >Focus Plugins Alphine</a
       >
     </li>
     <li>
-      <a href="https://tailwindcss.com/" class="font-bold">TailwindCSS V4</a>
+      <a href="https://tailwindcss.com/" class="font-bold underline"
+        >TailwindCSS V4</a
+      >
     </li>
   </ul>
 
-  <p>Let's see how you can use it in your project!</p>
+  <p
+  >
+    Let's see how you can use it in your project!
+  </p>
 
   <h2>1. Tailwind CSS Installation</h2>
-  <p>
+  <p
+  >
     The first step is to install Tailwind CSS 4.x in your project. Installation
     instructions can be found in the official documentation
     <a href="https://tailwindcss.com/docs/installation" class="font-bold"
@@ -33,47 +51,127 @@
     technology you use.
   </p>
 
-  <p>
+  <p
+  
+  >
     If it is already installed in your project, you can skip this step and go
     directly to the next step
   </p>
 
   <h2>2. Install the required plugins:</h2>
-  <p> In addition to requiring plugins from Tailwindcss, there are several plugins that you must install in your project so that Elysia UI can run properly, including:</p>
-  <ul>
-    <li><a href="https://alpinejs.dev/plugins/focus" class="font-bold">Alphine JS focus Plugins</a></li>
+  <p
+  >
+    In addition to requiring Tailwindcss, there are several plugins you'll need
+    to install in your project for the Elysia UI Component to run properly,
+    including:
+  </p>
+  <ul
+  >
+    <li>
+      <a href="https://alpinejs.dev/plugins/focus" class="font-bold underline"
+        >Alphine JS focus Plugins</a
+      >
+    </li>
   </ul>
-  <div>
-    <Shiki lang="bash" :code="vueExample" class="mt-6" />
+  <div data-prism-copy-timeout="500">
+    <pre
+      class="line-numbers bg-[#1e1e1e] text-gray-100 p-4 rounded-lg overflow-x-auto not-prose max-w-full"
+    ><code class="language-bash" data-prismjs-copy="Copy Code !">npm install @alphinejs/focus</code></pre>
   </div>
 
   <h2>3. TailwindCSS Configuration</h2>
+  <p
+  >
+    After installing tailwind css and the required plugins, you should use the
+    following configuration in your default css file to enable all the required
+    customizations.
+  </p>
+  <div data-prism-copy-timeout="500">
+    <pre
+      class="line-numbers bg-[#1e1e1e] text-gray-100 p-0 rounded-lg overflow-x-auto not-prose max-w-full text-sm"
+    ><code class="language-bash" data-prismjs-copy="Copy Code !">
+    /** Tailwind Css **/
+    @import "tailwindcss";
 
-  <p>After installing Tailwindcss and some required plugins, you will need to follow some configurations into your Default CSS to enable some required customizations.</p>
-  <div>
-   <Shiki lang="bash" :code="tailwindExample" class="mt-6"/>
+    /** Class Based Dark Mode **/
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    /* Settings Root and Darkmode **/
+    :root{
+      --background:#fff;
+    }
+
+    .dark{
+      --background: var(--color-zinc-900);
+    }
+
+    /* Theme Default */
+    @theme{
+      --font-display: "Inter",sans-serif;
+      --color-elysia-primary:#F4A9D9;
+      --color-elysia-hover:#ca72a5;
+    }
+    </code></pre>
   </div>
 
   <h2>4. Alphine JS</h2>
+  <p >You can install Alphine JS via NPM And add it your bundle like so</p>
+  <pre
+      class="line-numbers bg-[#1e1e1e] text-gray-100 p-0 rounded-lg overflow-x-auto not-prose max-w-full font-mono"
+    ><code class="language-bash ">
+    import Alpine from "alpinejs";
+    import focus from "@alpinejs/focus";
 
-  <p>You can install it using Npm</p>
-  <Shiki lang="bash" :code="bashExample" class="mb-3" />
-  <p>And you can include in your bundle such as:</p>
-  <Shiki lang="bash" :code="alphineExamples" class="mb-3" />
 
-  <p>Use the Alternative function by placing it in the Start Tag of your HTML Document:</p>
+    window.Alpine = Alpine;
 
-  <Shiki lang="bash" :code="bashExamples" class="mb-3" />
+    Alpine.plugin(focus);
+    Alpine.start();
+  </code></pre>
 
-  <p>Don't forget to add defer in the script you call</p>
-  
+  <p>Or you can also use the CDN version provided by Alphine JS</p>
 
+  <pre class="line-numbers bg-[#1e1e1e] text-gray-100 p-0 rounded-lg overflow-x-auto not-prose max-w-full"><code class="languange-html">
+    <!-- Alphine JS Plugins -->
+    /** Alphine JS Plugins **/
+    &lt;script 
+    defer 
+    src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"
+    &gt;&lt;/script&gt;
+
+    /** Alphine JS Core **/
+    &lt;script 
+    defer 
+    src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"
+    &gt;&lt;/script&gt;
+
+  </code></pre>
+  <h2>5. Inter Font (Optional) </h2>
+  <p>Finally, you can include the font we are using by default in the head section of your HTML:</p>
+  <div data-prism-copy-timeout="500">
+    <pre
+      class="line-numbers bg-[#1e1e1e] text-gray-100 p-0 rounded-lg overflow-x-auto not-prose max-w-full"
+    ><code class="language-html" data-prismjs-copy="Copy Code !">
+    &lt;rel="preconnect" href="https://fonts.bunny.net"/&gt;
+    &lt;href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"/&gt;
+    </code></pre>
+  </div>
+  <h2>6. Done, you are ready</h2>
+  <p>Be sure to contact us on the contact form provided for any suggestions on improvements or new components you would like to see.</p>
+  <p>Thank you for using our free components, have fun and have a nice day.</p>
+  <h2>Credits</h2>
+  <p>Our thanks to everyone who has worked hard to help us create our free Alphine JS components: </p>
+  <ul>
+    <li><a href="https://alphinejs.dev">Alphine JS (MIT License)</a></li>
+    <li><a href="https://tailwindcss.com">Tailwindcss (MIT License)</a></li>
+  </ul>
 </template>
+
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import menu from "~/menu";
-import { CodeBlock } from "~/components/CodeBlock.vue";
 
 definePageMeta({
   layout: "docs",
@@ -82,61 +180,13 @@ definePageMeta({
 const route = useRoute();
 
 const pageTitle = computed(() => {
-  return menu.find((m) => m.path === route.path)?.title || "Docs";
-});
+  // Ambil semua items dari setiap grup, jadi array datar
+  const allItems = menu.flatMap(group => group.items || [])
 
-const vueExample = `
-  npm install @alpinejs/focus
-`
-const tailwindExample = `
-  /* Tailwind CSS */
-  @import "tailwindcss";
+  // Cari item berdasarkan path
+  const found = allItems.find(item => item?.path === route?.path)
 
-  /* Dark Mode */
-  @custom-variant dark (&:where(.dark, .dark *));
-
-  :root{
-    --background: #ffff;
-  }
-
-  .dark {
-    --background: var(--color-zinc-900);
-  }
-
-  /* Customizations */
-  @theme{
-    --color-elysia-primary:#F4A9D9;
-    --color-elysia-hover:#ca72a5;
-    
-    --color-secondary-50: var(--color-zinc-50);
-    --color-secondary-100: var(--color-zinc-100);
-    --color-secondary-200: var(--color-zinc-200);
-    --color-secondary-300: var(--color-zinc-300);
-    --color-secondary-400: var(--color-zinc-400);
-    --color-secondary-500: var(--color-zinc-500);
-    --color-secondary-600: var(--color-zinc-600);
-    --color-secondary-700: var(--color-zinc-700);
-    --color-secondary-800: var(--color-zinc-800);
-    --color-secondary-900: var(--color-zinc-900);
-    --color-secondary-950: var(--color-zinc-950);
-
-    --font-display: "Inter",sans-serif;
-  }
-`
-
-const bashExample = `
-  npm install alphinejs
-`
-
-const alphineExamples = `
-  import Alpine from "alpinejs";
-  import focus from "@alpinejs/focus";
-
-  window.Alpine = Alpine;
-
-  Alpine.plugin(focus);
-  Alpine.start();
-`
-
-const bashExamples = `https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js`
+  // Ambil title, atau fallback ke "Docs"
+  return found?.title || 'Docs'
+})
 </script>

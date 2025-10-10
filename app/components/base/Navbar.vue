@@ -70,7 +70,7 @@
         <div class="flex gap-3">
           <button
             @click="$emit('toggleSidebar')"
-            class="lg:hidden flex bg-white text-secondary-800 dark:text-secondary-200 cursor-pointer mr-1 py-3 px-3 rounded-md border border-secondary-100 dark:bg-secondary-900 dark:border-secondary-900 dark:hover:border-secondary-100 shadow"
+            class="lg:hidden flex bg-white text-secondary-800 dark:text-secondary-200 cursor-pointer mr-1 py-3 px-3 rounded-md border border-secondary-100 dark:bg-secondary-900 dark:border-secondary-900 dark:hover:border-secondary-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@
           </button>
           <button
             @click="mobileOpen = true"
-            class="md:hidden flex bg-white text-secondary-800 dark:text-secondary-200 cursor-pointer mr-1 py-3 px-3 rounded-md border border-secondary-100 dark:bg-secondary-900 dark:border-secondary-900 dark:hover:border-secondary-100 shadow"
+            class="md:hidden flex bg-white text-secondary-800 dark:text-secondary-200 cursor-pointer mr-1 py-3 px-3 rounded-md border border-secondary-100 dark:bg-secondary-900 dark:border-secondary-900 dark:hover:border-secondary-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

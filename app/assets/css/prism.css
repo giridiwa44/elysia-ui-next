@@ -1,0 +1,42 @@
+/* Import base Prism theme */
+@import 'prismjs/themes/prism-tomorrow.css';
+
+/* --- Custom Minimal Theme Override --- */
+pre[class*="language-"] {
+  background: #f8f9fa;
+  color: #2d2d2d;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid #e0e0e0;
+  line-height: 1.6;
+}
+
+code[class*="language-"] {
+  background: none;
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+/* Syntax coloring */
+.token.comment { color: #6a737d; font-style: italic; }
+.token.keyword { color: #007acc; font-weight: 500; }
+.token.string { color: #22863a; }
+.token.function { color: #795e26; }
+.token.number { color: #b58900; }
+.token.operator, .token.punctuation { color: #444; }
+
+/* Optional hover effect */
+pre[class*="language-"]:hover {
+  border-color: #cfcfcf;
+  transition: border-color 0.3s ease;
+}
+pre[class*="language-"],
+code[class*="language-"] {
+  color: #f8f8f2 !important;
+  font-family: monospace;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
