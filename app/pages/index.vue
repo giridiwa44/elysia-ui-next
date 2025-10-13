@@ -17,7 +17,7 @@
             </a>
             <h2
               id="hero-title"
-              class="mb-4 text-xl font-display text-black lg:text-5xl/[1.12] dark:text-white"
+              class="split mb-4 text-xl font-display text-black lg:text-5xl/[1.12] dark:text-white"
             >
               Beautiful UI components build with Tailwind CSS and Alphine JS.
             </h2>
@@ -61,7 +61,7 @@
               <div
                 class="absolute inset-0 rounded-full bg-linear-to-b from-primary-500 via-elysia-primary to-elysia-hover opacity-40 blur-3xl transition group-hover:scale-95"
               ></div>
-              <img :src="elysia" alt="Elysia Ui" />
+              <img ref="logo" :src="elysia" alt="Elysia Ui" />
             </div>
           </div>
         </div>
@@ -75,14 +75,15 @@
           class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8"
         >
           <div
-            class="relative m-px grow rounded-xl bg-secondary-50 p-6 lg:p-8 xl:p-10 dark:bg-secondary-800"
+            class="relative m-px grow rounded-xl bg-secondary-50 p-6 lg:p-8 xl:p-10 dark:bg-secondary-800 border border-transparent shadow-sm transition-all duration-300 
+           hover:-translate-y-1 hover:shadow-lg hover:border-pink-300/60 cursor-pointer"
           >
             <div
               class="absolute end-2 top-2 rounded-full bg-secondary-200/50 px-2 py-1 text-xs font-medium text-secondary-950 dark:bg-secondary-400/15 dark:text-secondary-50"
             >
               Built with V3
             </div>
-            <div class="relative mb-8 w-12 text-elysia-info">
+            <div class="relative mb-8 w-12 text-elysia-info transition-transform duration-300 group-hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                 <path
                   fill="#F4A9D9"
@@ -107,14 +108,15 @@
             </p>
           </div>
           <div
-            class="relative m-px grow rounded-xl bg-secondary-50 p-6 lg:p-8 xl:p-10 dark:bg-secondary-800"
+            class="relative m-px grow rounded-xl bg-secondary-50 p-6 lg:p-8 xl:p-10 dark:bg-secondary-800 border border-transparent shadow-sm transition-all duration-300 
+           hover:-translate-y-1 hover:shadow-lg hover:border-pink-300/60 cursor-pointer"
           >
             <div
               class="absolute end-2 top-2 rounded-full bg-secondary-200/50 px-2 py-1 text-xs font-medium text-secondary-950 dark:bg-secondary-400/15 dark:text-secondary-50"
             >
               Built with V4
             </div>
-            <div class="relative mb-8 w-12 text-elysia-info">
+            <div class="relative mb-8 w-12 text-elysia-info transition-transform duration-300 group-hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                 <path
                   d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
@@ -131,9 +133,10 @@
             </p>
           </div>
           <div
-            class="relative m-px grow rounded-xl bg-secondary-50 p-6 lg:p-8 xl:p-10 dark:bg-secondary-800"
+            class="relative m-px grow rounded-xl bg-secondary-50 p-6 lg:p-8 xl:p-10 dark:bg-secondary-800 border border-transparent shadow-sm transition-all duration-300 
+           hover:-translate-y-1 hover:shadow-lg hover:border-pink-300/60 cursor-pointer"
           >
-            <div class="relative mb-8 w-12 text-elysia-primary">
+            <div class="relative mb-8 w-12 text-elysia-primary transition-transform duration-300 group-hover:scale-110">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -160,9 +163,10 @@
           </div>
 
           <div
-            class="relative m-px grow rounded-xl bg-secondary-50 p-6 lg:p-8 xl:p-10 dark:bg-secondary-800"
+            class="relative m-px grow rounded-xl bg-secondary-50 p-6 lg:p-8 xl:p-10 dark:bg-secondary-800 border border-transparent shadow-sm transition-all duration-300 
+           hover:-translate-y-1 hover:shadow-lg hover:border-pink-300/60 cursor-pointer"
           >
-            <div class="relative mb-8 w-12 text-elysia-primary">
+            <div class="relative mb-8 w-12 text-elysia-primary transition-transform duration-300 group-hover:scale-110">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -330,4 +334,29 @@
 <script setup>
 import elysia from "@/assets/img/elysia.webp";
 import realm from "@/assets/img/realm.webp";
+import { onMounted } from 'vue'
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger);
+const logo = ref(null)
+
+onMounted(() => {
+  let split = SplitText.create(".split", { type: "words, chars" });
+
+  gsap.from(split.chars, {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.05,
+  })
+
+  gsap.fromTo(
+    logo.value,
+    { y: -50, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1.2, ease:'power3.out'}
+  )
+})
 </script>

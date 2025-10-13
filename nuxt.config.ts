@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     },
 
   },
+  plugins:['./plugins/alphine.client.js'],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   modules: ['@nuxt/fonts'],

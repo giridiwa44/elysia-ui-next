@@ -75,8 +75,8 @@
   </ul>
   <div data-prism-copy-timeout="500">
     <pre
-      class="line-numbers bg-[#1e1e1e] text-gray-100 p-4 rounded-lg overflow-x-auto not-prose max-w-full"
-    ><code class="language-bash" data-prismjs-copy="Copy Code !">npm install @alphinejs/focus</code></pre>
+      class="overflow-x-auto p-6"
+    ><code ref="codeBlock" class="language-shell">{{ code }}</code></pre>
   </div>
 
   <h2>3. TailwindCSS Configuration</h2>
@@ -88,8 +88,53 @@
   </p>
   <div data-prism-copy-timeout="500">
     <pre
-      class="line-numbers bg-[#1e1e1e] text-gray-100 p-0 rounded-lg overflow-x-auto not-prose max-w-full text-sm"
-    ><code class="language-bash" data-prismjs-copy="Copy Code !">
+      class="overflow-x-auto p-6"
+    ><code ref="codeBlock" class="language-css">
+    {{ twcode }}
+    </code></pre>
+  </div>
+
+  <h2>4. Alphine JS</h2>
+  <p >You can install Alphine JS via NPM And add it your bundle like so</p>
+  <pre
+      class="overflow-x-auto p-6"
+    ><code ref="codeBlock" class="language-javascript">
+    {{ impcode }}
+  </code></pre>
+
+  <p>Or you can also use the CDN version provided by Alphine JS</p>
+
+  <pre class="overflow-x-auto p-6"><code ref="codeBlock" class="language-markup" v-html="htmlcode"></code></pre>
+  <h2>5. Inter Font (Optional) </h2>
+  <p>Finally, you can include the font we are using by default in the head section of your HTML:</p>
+  <pre class="overflow-x-auto p-6"><code ref="codeBlock" class="language-markup" v-html="intercode"></code></pre>
+  <h2>6. Done, you are ready</h2>
+  <p>Be sure to contact us on the contact form provided for any suggestions on improvements or new components you would like to see.</p>
+  <p>Thank you for using our free components, have fun and have a nice day.</p>
+  <h2>Credits</h2>
+  <p>Our thanks to everyone who has worked hard to help us create our free Alphine JS components: </p>
+  <ul>
+    <li><a href="https://alphinejs.dev">Alphine JS (MIT License)</a></li>
+    <li><a href="https://tailwindcss.com">Tailwindcss (MIT License)</a></li>
+    <li><a href="https://devdojo.com/pines">Pines UI (MIT License)</a></li>
+  </ul>
+</template>
+
+<script setup lang="ts">
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import menu from "~/menu";
+import { ref, onMounted, watch } from 'vue'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-markup'
+import 'prismjs/themes/prism-tomorrow.css'
+
+definePageMeta({
+  layout: "docs",
+});
+
+const code = ref(`npm install @alphinejs/focus`)
+const twcode = ref(`
     /** Tailwind Css **/
     @import "tailwindcss";
 
@@ -110,15 +155,9 @@
       --font-display: "Inter",sans-serif;
       --color-elysia-primary:#F4A9D9;
       --color-elysia-hover:#ca72a5;
-    }
-    </code></pre>
-  </div>
+    }`)
 
-  <h2>4. Alphine JS</h2>
-  <p >You can install Alphine JS via NPM And add it your bundle like so</p>
-  <pre
-      class="line-numbers bg-[#1e1e1e] text-gray-100 p-0 rounded-lg overflow-x-auto not-prose max-w-full font-mono"
-    ><code class="language-bash ">
+const impcode = ref(`
     import Alpine from "alpinejs";
     import focus from "@alpinejs/focus";
 
@@ -127,56 +166,28 @@
 
     Alpine.plugin(focus);
     Alpine.start();
-  </code></pre>
+`)
 
-  <p>Or you can also use the CDN version provided by Alphine JS</p>
+const htmlcode = ref(`
+   /** Alphine Focus Plugins **/
+   &lt;script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"&gt;&lt;/script&gt;
+   /** Alphine Core Plugins **/
+   &lt;script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"&gt;&lt;/script&gt;
+`)
 
-  <pre class="line-numbers bg-[#1e1e1e] text-gray-100 p-0 rounded-lg overflow-x-auto not-prose max-w-full"><code class="languange-html">
-    <!-- Alphine JS Plugins -->
-    /** Alphine JS Plugins **/
-    &lt;script 
-    defer 
-    src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"
-    &gt;&lt;/script&gt;
+const intercode = ref(`
+  /** Input Font Inter **/
+  &lt;rel="preconnect" href="https://fonts.bunny.net"/&gt;
+  &lt;href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet"/&gt;
+`)
+const codeBlock = ref(null)
 
-    /** Alphine JS Core **/
-    &lt;script 
-    defer 
-    src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"
-    &gt;&lt;/script&gt;
-
-  </code></pre>
-  <h2>5. Inter Font (Optional) </h2>
-  <p>Finally, you can include the font we are using by default in the head section of your HTML:</p>
-  <div data-prism-copy-timeout="500">
-    <pre
-      class="line-numbers bg-[#1e1e1e] text-gray-100 p-0 rounded-lg overflow-x-auto not-prose max-w-full"
-    ><code class="language-html" data-prismjs-copy="Copy Code !">
-    &lt;rel="preconnect" href="https://fonts.bunny.net"/&gt;
-    &lt;href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"/&gt;
-    </code></pre>
-  </div>
-  <h2>6. Done, you are ready</h2>
-  <p>Be sure to contact us on the contact form provided for any suggestions on improvements or new components you would like to see.</p>
-  <p>Thank you for using our free components, have fun and have a nice day.</p>
-  <h2>Credits</h2>
-  <p>Our thanks to everyone who has worked hard to help us create our free Alphine JS components: </p>
-  <ul>
-    <li><a href="https://alphinejs.dev">Alphine JS (MIT License)</a></li>
-    <li><a href="https://tailwindcss.com">Tailwindcss (MIT License)</a></li>
-  </ul>
-</template>
-
-<script setup lang="ts">
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-import menu from "~/menu";
-
-definePageMeta({
-  layout: "docs",
+onMounted(() => {
+  Prism.highlightAll()
 });
 
+// re-highlight saat showCode diubah
 const route = useRoute();
 
 const pageTitle = computed(() => {
@@ -190,3 +201,32 @@ const pageTitle = computed(() => {
   return found?.title || 'Docs'
 })
 </script>
+<style scoped>
+pre[class*="language-"] {
+  background: #1e1e1e; /* Warna Prism Tomorrow Night */
+  color: #f8f8f2; /* rounded bawah */
+  margin: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2b2b2b;
+}
+
+pre[class*="language-"]::-webkit-scrollbar {
+  height: 8px;
+}
+pre[class*="language-"]::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+pre[class*="language-"]::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+code[class*="language-"] {
+  font-family: "Fira Code", monospace;
+  white-space: pre;
+}
+</style>
