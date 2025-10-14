@@ -10,7 +10,8 @@ export default [
     title: 'Component',
     items: [
       { path: '/components/accordion', title: 'Accordion' },
-      { path: '/components/alert' ,title: 'Alert' },
+      { path: '/components/alert', title: 'Alert' },
+      { path: '/components/banner', title: 'Banner'},
     ],
   },
 ]

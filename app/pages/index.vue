@@ -50,8 +50,8 @@
                 </svg>
               </a>
               <a
-                href="/"
-                class="group inline-flex items-center justify-center gap-2 rounded-lg border border-secondary-200 bg-white font-semibold text-secondary-800 hover:border-secondary-300 hover:text-secondary-900 hover:shadow-xs focus:ring-secondary-300/25 active:border-secondary-200 active:shadow-none dark:border-secondary-700 dark:bg-transparent dark:text-secondary-300 dark:hover:border-secondary-600 dark:hover:text-secondary-200 dark:focus:ring-secondary-600/50 dark:active:border-secondary-700 focus:ring-2 focus:outline-hidden min-w-[2.875rem] p-3 text-sm leading-5 sm:px-4"
+                href="/components/accordion"
+                class="group inline-flex items-center justify-center gap-2 rounded-lg border border-elysia-primary bg-white font-semibold text-secondary-800 hover:border-secondary-300 hover:text-secondary-900 hover:shadow-xs focus:ring-secondary-300/25 active:border-secondary-200 active:shadow-none dark:border-secondary-700 dark:bg-transparent dark:text-secondary-300 dark:hover:border-secondary-600 dark:hover:text-secondary-200 dark:focus:ring-secondary-600/50 dark:active:border-secondary-700 focus:ring-2 focus:outline-hidden min-w-[2.875rem] p-3 text-sm leading-5 sm:px-4"
                 >View All Components</a
               >
             </div>
@@ -59,7 +59,7 @@
           <div class="flex items-center justify-center">
             <div class="relative mx-auto w-full max-w-lg">
               <div
-                class="absolute inset-0 rounded-full bg-linear-to-b from-primary-500 via-elysia-primary to-elysia-hover opacity-40 blur-3xl transition group-hover:scale-95"
+                class="absolute inset-0 rounded-full bg-linear-to-b from-elysia-primary via-elysia-primary to-elysia-hover opacity-40 blur-3xl transition group-hover:scale-95"
               ></div>
               <img ref="logo" :src="elysia" alt="Elysia Ui" />
             </div>
