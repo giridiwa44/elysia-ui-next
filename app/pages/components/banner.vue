@@ -22,6 +22,8 @@
             </div>
         </transition>
      </div>
+     <h2>Banner Toggler</h2>
+     <p>A Button to call the function of the banner</p>
      <div class="max-w-2xl mx-auto bg-white dark:bg-secondary-900 rounded-2xl overflow-hidden border border-secondary-200 dark:border-secondary-800 mb-2">
         <div class="flex justify-between items-center p-4 border-b border-secondary-200 dark:border-secondary-800">
             <div class="flex items-center gap-2">
@@ -36,7 +38,7 @@
           <transition name="slide-fade">
             <div v-if="showBanner" class="bg-white shadow-sm px-4 py-3 rounded-md">
               <div class="flex justify-between items-center">
-                <span class="text-sm font-normal"> 🌠 New Component  Available ! Checkout This Update </span>
+                <span class="text-sm font-normal dark:text-secondary-900"> 🌠 New Component  Available ! Checkout This Update </span>
                 <button @click="showBanner = false" class="p-1 hover:bg-indigo-500 rounded-full text-secondary-400 cursor-pointer hover:text-white">          
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -49,7 +51,9 @@
               Showcase content goes here. The banner will appear right below the
               header when triggered.
             </p>
-          <button @click="showBanner = true" class="text-xs bg-indigo-100 text-indigo-700 px-3 py-2 rounded-md hover:bg-indigo-200 transition dark:bg-indigo-700 dark:text-indigo-200 dark:hover:bg-indigo-600 mt-3 cursor-pointer">Open Banner</button>
+            <div class="flex justify-center">
+              <button @click="showBanner = true" class="text-xs bg-indigo-100 text-indigo-700 px-3 py-2 rounded-md hover:bg-indigo-200 transition dark:bg-indigo-700 dark:text-indigo-200 dark:hover:bg-indigo-600 mt-3 cursor-pointer">Open Banner</button>
+            </div>
         </div>
         <transition enter-active-class="transition-all duration-300 ease-in-out" leave-active-class="transition-all duration-300 ease-in-out" enter-from-class="max-h-0 opacity-0" enter-to-class="max-h-[800px] opacity-100" leave-from-class="max-h-[800px] opacity-100" leave-to-class="max-h-0 opacity-0">
             <div v-if="expandCode" class="bg-secondary-900 text-gray-100 text-sm border-t border-secondary-700">
@@ -58,6 +62,50 @@
         </transition>
      </div>
    </section>
+    <div>
+    <h2 class="text-lg font-bold">Props</h2>
+    <p>The Available Data Propeties for this component</p>
+    <div class="min-w-full overflow-auto ronded-sm border border-secondary-100 dark:border-secondary-800">
+
+      <table class="min-w-full align-middle text-sm whitespace-nowrap">
+        <thead>
+          <tr class="border-b border-secondary-100 dark:border-secondary-900">
+            <th class="w-36 bg-secondary-50 p-4 text-left font-semibold text-secondary-900 dark:bg-secondary-700/25 dark:text-secondary-50">Property</th>
+            <th class="w-36 bg-secondary-50 p-4 text-left font-semibold text-secondary-900 dark:bg-secondary-700/25 dark:text-secondary-50">Default</th>
+            <th class="bg-secondary-50 p-4 text-left font-semibold text-secondary-900 dark:bg-secondary-700/25 dark:text-secondary-50">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class>
+            <td class="p-4">
+              <span class="inline-flex min-w-8 justify-center rounded-full border border-transparent bg-primary-100 px-2 py-1 text-sm/4 font-medium text-primary-900 dark:border-primary-900 dark:bg-primary-700/10 dark:text-primary-200">
+                show
+              </span>
+            </td>
+            <td class="p-4 text-secondary-500 dark:text-secondary-400">
+              <span class="inline-flex min-w-8 justify-center rounded-lg border border-transparent bg-secondary-100 px-2 py-1 text-sm/4 font-medium text-wrap text-secondary-900 dark:border-secondary-900 dark:bg-secondary-700/50 dark:text-secondary-200">false</span>
+            </td>
+            <td class="p-4 leading-relaxed text-secondary-600 sm:text-wrap dark:text-secondary-400">
+             Set visibility of Banner
+            </td>
+          </tr>
+          <tr class>
+            <td class="p-4">
+              <span class="inline-flex min-w-8 justify-center rounded-full border border-transparent bg-primary-100 px-2 py-1 text-sm/4 font-medium text-primary-900 dark:border-primary-900 dark:bg-primary-700/10 dark:text-primary-200">
+                ShowBanner
+              </span>
+            </td>
+            <td class="p-4 text-secondary-500 dark:text-secondary-400">
+              <span class="inline-flex min-w-8 justify-center rounded-lg border border-transparent bg-secondary-100 px-2 py-1 text-sm/4 font-medium text-wrap text-secondary-900 dark:border-secondary-900 dark:bg-secondary-700/50 dark:text-secondary-200">false</span>
+            </td>
+            <td class="p-4 leading-relaxed text-secondary-600 sm:text-wrap dark:text-secondary-400">
+             Set visibility of Button trigger banner
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </template>
 <script setup>
 import Banner from '~/components/ui/Banner.vue';

@@ -164,7 +164,19 @@ const items = [
     url: "/components/accordion",
     category: "Components",
     icon: Box,
-  }
+  },
+  {
+    title: "Banner",
+    url: "/components/banner",
+    category: "Components",
+    icon: Box,
+  },
+  {
+    title: "Color Picker",
+    url: "/components/colorpicker",
+    category: "Components",
+    icon: Box,
+  },
 ];
 
 const groupedResults = computed(() => {

@@ -5,14 +5,14 @@
     </h1>
     <p>
     An Element That Is Suitable for Use on FAQ Pages</p>
-    <div class="max-w-2xl mx-auto bg-white dark:bg-secondary-900 rounded-2xl overflow-hiden border border-secondary-200 dark:border-secondary-800">
+    <div class="max-w-2xl mx-auto bg-white dark:bg-secondary-900 rounded-2xl overflow-hidden border border-secondary-200 dark:border-secondary-800">
       <div class="flex justify-between items-center p-4 border-b border-secondary-200 dark:border-secondary-800">
         <div class="flex items-center gap-2">
           <button @click="showCode = !showCode" class="text-xs bg-secondary-100 px-2 py-2 rounded-md hover:bg-secondary-200 transition dark:bg-secondary-700 dark:hover:bg-secondary-800 dark:text-secondary-100 cursor-pointer">
             {{ showCode ? 'Hide Code' : 'Show Code' }}
           </button>
         </div>
-        <button class="text-xs bg-secondary-100 px-2 py-2 rounded-md hover:bg-secondary-200 transition dark:bg-secondary-700">Copy It</button>
+        <button class="text-xs bg-secondary-100 px-2 py-2 rounded-md hover:bg-secondary-800 transition dark:bg-secondary-700">Copy It</button>
       </div>
       <div class="p-6">
         <Accordion />
@@ -31,7 +31,7 @@
 
       <table class="min-w-full align-middle text-sm whitespace-nowrap">
         <thead>
-          <tr class="border-b border-secondary-100 dark:border-secondary-100">
+          <tr class="border-b border-secondary-100 dark:border-secondary-900">
             <th class="w-36 bg-secondary-50 p-4 text-left font-semibold text-secondary-900 dark:bg-secondary-700/25 dark:text-secondary-50">Property</th>
             <th class="w-36 bg-secondary-50 p-4 text-left font-semibold text-secondary-900 dark:bg-secondary-700/25 dark:text-secondary-50">Default</th>
             <th class="bg-secondary-50 p-4 text-left font-semibold text-secondary-900 dark:bg-secondary-700/25 dark:text-secondary-50">Description</th>
