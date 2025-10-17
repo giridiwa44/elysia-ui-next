@@ -8,4 +8,5 @@ export default defineNuxtPlugin(() => {
     window.Alpine = Alpine
     Alpine.start()
   }
+
 })

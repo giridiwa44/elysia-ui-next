@@ -152,9 +152,45 @@ const twcode = ref(`
 
     /* Theme Default */
     @theme{
-      --font-display: "Inter",sans-serif;
-      --color-elysia-primary:#F4A9D9;
-      --color-elysia-hover:#ca72a5;
+     --color-elysia-primary:#F4A9D9;
+    --color-elysia-hover:#ca72a5;
+    
+    --color-secondary-50: var(--color-zinc-50);
+    --color-secondary-100: var(--color-zinc-100);
+    --color-secondary-200: var(--color-zinc-200);
+    --color-secondary-300: var(--color-zinc-300);
+    --color-secondary-400: var(--color-zinc-400);
+    --color-secondary-500: var(--color-zinc-500);
+    --color-secondary-600: var(--color-zinc-600);
+    --color-secondary-700: var(--color-zinc-700);
+    --color-secondary-800: var(--color-zinc-800);
+    --color-secondary-900: var(--color-zinc-900);
+    --color-secondary-950: var(--color-zinc-950);
+
+    --color-primary-100: var(--color-teal-100);
+    --color-primary-200: var(--color-teal-200);
+    --color-primary-300: var(--color-teal-300);
+    --color-primary-400: var(--color-teal-400);
+    --color-primary-500: var(--color-teal-500);
+    --color-primary-600: var(--color-teal-600);
+    --color-primary-700: var(--color-teal-700);
+    --color-primary-800: var(--color-teal-800);
+    --color-primary-900: var(--color-teal-900);
+    --color-primary-950: var(--color-teal-950);
+
+    --color-elysia-50: #fcf3f9;
+    --color-elysia-100: #fbe8f5;
+    --color-elysia-200: #f9d1ec;
+    --color-elysia-300: #f4a9d9;
+    --color-elysia-400: #ed79c1;
+    --color-elysia-500: #e351a7;
+    --color-elysia-600: #d13187;
+    --color-elysia-700: #b5216d;
+    --color-elysia-800: #951f59;
+    --color-elysia-900: #7d1e4d;
+    --color-elysia-950: #4c0b2b;
+    
+    --font-display: "Inter",sans-serif;
     }`)
 
 const impcode = ref(`

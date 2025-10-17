@@ -177,6 +177,12 @@ const items = [
     category: "Components",
     icon: Box,
   },
+  {
+    title: "Dropdown",
+    url: "/components/dropdown",
+    category: "Components",
+    icon: Box,
+  }
 ];
 
 const groupedResults = computed(() => {
